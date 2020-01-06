@@ -14,5 +14,4 @@ fun sumMultiplesOf3and5(n: Int) = (1 until n).filter {
     multipleOf(it, 3) || multipleOf(it, 5)
 }.reduce(Int::plus)
 
-
 fun multipleOf(number: Int, multiple: Int) = number % multiple == 0
