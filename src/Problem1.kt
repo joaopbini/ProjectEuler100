@@ -16,7 +16,7 @@ fun multiplesOf3and5(n: Int): Int {
 
     for (i in 1 until n) {
 
-        if (i % 3 == 0 || i % 5 == 0) {
+        if (multipleOf(i, 3) || multipleOf(i, 5)) {
             sum += i
         }
 
@@ -24,3 +24,5 @@ fun multiplesOf3and5(n: Int): Int {
 
     return sum
 }
+
+fun multipleOf(number: Int, multiple: Int) = number % multiple == 0
