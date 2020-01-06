@@ -7,10 +7,10 @@
 
 
 fun main() {
-    println(multiplesOf3and5(1000))
+    println(sumMultiplesOf3and5(1000))
 }
 
-fun multiplesOf3and5(n: Int): Int {
+fun sumMultiplesOf3and5(n: Int): Int {
 
     var sum = 0
 
