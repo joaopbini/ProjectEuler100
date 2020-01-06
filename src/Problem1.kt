@@ -10,19 +10,9 @@ fun main() {
     println(sumMultiplesOf3and5(1000))
 }
 
-fun sumMultiplesOf3and5(n: Int): Int {
+fun sumMultiplesOf3and5(n: Int) = (1 until n).filter {
+    multipleOf(it, 3) || multipleOf(it, 5)
+}.reduce(Int::plus)
 
-    var sum = 0
-
-    for (i in 1 until n) {
-
-        if (multipleOf(i, 3) || multipleOf(i, 5)) {
-            sum += i
-        }
-
-    }
-
-    return sum
-}
 
 fun multipleOf(number: Int, multiple: Int) = number % multiple == 0
